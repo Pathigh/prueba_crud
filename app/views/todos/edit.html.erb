@@ -1,0 +1,15 @@
+<h1> Editar un ToDo</h1>
+
+
+<%= form_with(model: @todo, local: true) do |form| %>
+<%= form.label :description %>
+<%= form.text_field :description %>
+<%= form.label :complete %>
+<%= form.check_box :completed %>
+<br>
+<%= form.submit 'confirmar' %>
+
+
+<% end %>
+
+<%= link_to 'Volver al Index', root_path %>

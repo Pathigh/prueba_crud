@@ -1,0 +1,23 @@
+<h1>Index</h1>
+
+<%= link_to 'Crear nuevo ToDo', todos_new_path %>
+<h5> <%= notice %></h5>
+
+
+<br>
+<table>
+	<tr>
+		<th>Description</th>
+		<br>
+	</tr>
+	<% @todos.each do |todo| %>
+	<tr>
+		
+		<td><%= todo.description %></td>
+		<td><%= link_to 'Mostrar', todo_path(todo) %></td>
+		<td><%= link_to 'modificar', edit_todo_path(todo) %></td>
+		<td><%= link_to 'eliminar', destroy_todo_path(todo), method: :delete %></td>
+	</tr>
+
+	<% end  %>
+</table>

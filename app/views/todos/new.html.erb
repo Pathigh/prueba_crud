@@ -1,0 +1,12 @@
+<h1> Crear Un nuevo ToDo</h1>
+
+
+<%= form_with(model: @todo, local: true) do |form| %>
+<%= form.label :description %>
+<%= form.text_field :description %>
+<br>
+<%= form.submit 'create' %>
+
+<% end %>
+
+<%= link_to 'Volver al Index', root_path %>
