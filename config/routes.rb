@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 	delete 'todos/:id', to: 'todos#destroy', as: 'destroy_todo'
 
 	get 'todos/todos/id/complete', to: 'todos#complete'
-	get 'todos/list'
+	get 'todos/list', to:'todos#list', as: 'listar'
 
 	root 'todos#index'
 	
